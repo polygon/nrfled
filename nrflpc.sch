@@ -289,6 +289,12 @@ drill 1.4 mm</description>
 <text x="-3.6" y="4.7" size="0.8128" layer="25" font="vector">&gt;NAME</text>
 <text x="-3.8" y="-5.55" size="0.8128" layer="27" font="vector">&gt;VALUE</text>
 </package>
+<package name="MT">
+<smd name="3" x="-1.2" y="-0.9" dx="1.3" dy="1" layer="1"/>
+<smd name="2" x="-1.2" y="0.9" dx="1.3" dy="1" layer="1"/>
+<smd name="1" x="1.2" y="0.9" dx="1.3" dy="1" layer="1"/>
+<smd name="4" x="1.2" y="-0.9" dx="1.3" dy="1" layer="1"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LM3401">
@@ -313,6 +319,22 @@ drill 1.4 mm</description>
 <rectangle x1="-2.54" y1="-1.27" x2="2.54" y2="1.27" layer="94"/>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="Q">
+<wire x1="1.016" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.016" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="1.524" x2="-0.381" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="-0.381" y1="-1.524" x2="0.381" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="0.381" y1="-1.524" x2="0.381" y2="1.524" width="0.254" layer="94"/>
+<wire x1="0.381" y1="1.524" x2="-0.381" y2="1.524" width="0.254" layer="94"/>
+<wire x1="1.016" y1="1.778" x2="1.016" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="1.778" x2="-1.016" y2="-1.778" width="0.254" layer="94"/>
+<text x="2.54" y="1.016" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-2.159" y="-1.143" size="0.8636" layer="93">1</text>
+<text x="1.524" y="-1.143" size="0.8636" layer="93">2</text>
+<pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -347,6 +369,22 @@ drill 1.4 mm</description>
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MT-OSCILLATOR" prefix="Q">
+<gates>
+<gate name="G$1" symbol="Q" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -8561,6 +8599,15 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <part name="P+7" library="supply1" deviceset="+12V" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="IC1" library="lpc1100v1.1" deviceset="LPC1111/12/13/14-HVQFN33" device=""/>
+<part name="Q1" library="seb" deviceset="MT-OSCILLATOR" device="" value="20MHz"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0402" value="18pF"/>
+<part name="C2" library="rcl" deviceset="C-EU" device="C0402" value="18pF"/>
+<part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
+<part name="C3" library="rcl" deviceset="C-EU" device="C0402" value="100nF"/>
+<part name="C4" library="rcl" deviceset="C-EU" device="C0402" value="100nF"/>
+<part name="GND5" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8682,6 +8729,15 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <instance part="P+7" gate="1" x="330.2" y="106.68"/>
 <instance part="GND12" gate="1" x="330.2" y="93.98"/>
 <instance part="IC1" gate="G$1" x="203.2" y="142.24"/>
+<instance part="Q1" gate="G$1" x="167.64" y="142.24" rot="R90"/>
+<instance part="C1" gate="G$1" x="160.02" y="137.16" rot="R270"/>
+<instance part="C2" gate="G$1" x="157.48" y="147.32" rot="R90"/>
+<instance part="GND1" gate="1" x="149.86" y="132.08"/>
+<instance part="GND2" gate="1" x="172.72" y="91.44"/>
+<instance part="+3V4" gate="G$1" x="152.4" y="195.58"/>
+<instance part="C3" gate="G$1" x="157.48" y="180.34"/>
+<instance part="C4" gate="G$1" x="167.64" y="180.34"/>
+<instance part="GND5" gate="1" x="162.56" y="170.18"/>
 </instances>
 <busses>
 </busses>
@@ -8821,6 +8877,32 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <pinref part="EXT" gate="A" pin="10"/>
 <wire x1="309.88" y1="96.52" x2="330.2" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="149.86" y1="134.62" x2="149.86" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="147.32" x2="149.86" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="147.32" x2="149.86" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="149.86" y1="137.16" x2="154.94" y2="137.16" width="0.1524" layer="91"/>
+<junction x="149.86" y="137.16"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VSS"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="175.26" y1="96.52" x2="172.72" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="96.52" x2="172.72" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="167.64" y1="175.26" x2="167.64" y2="172.72" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="167.64" y1="172.72" x2="162.56" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="172.72" x2="157.48" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="172.72" x2="157.48" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+<junction x="162.56" y="172.72"/>
 </segment>
 </net>
 <net name="!RST" class="0">
@@ -9234,6 +9316,24 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <wire x1="302.26" y1="106.68" x2="284.48" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VDD1"/>
+<pinref part="+3V4" gate="G$1" pin="+3V3"/>
+<wire x1="175.26" y1="190.5" x2="157.48" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="190.5" x2="152.4" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="190.5" x2="152.4" y2="193.04" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="VDD2"/>
+<wire x1="175.26" y1="185.42" x2="167.64" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="185.42" x2="152.4" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="185.42" x2="152.4" y2="190.5" width="0.1524" layer="91"/>
+<junction x="152.4" y="190.5"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="157.48" y1="182.88" x2="157.48" y2="190.5" width="0.1524" layer="91"/>
+<junction x="157.48" y="190.5"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="167.64" y1="182.88" x2="167.64" y2="185.42" width="0.1524" layer="91"/>
+<junction x="167.64" y="185.42"/>
+</segment>
 </net>
 <net name="CE" class="0">
 <segment>
@@ -9328,6 +9428,28 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <pinref part="IC8" gate="G$1" pin="VIN"/>
 <pinref part="C16" gate="G$1" pin="2"/>
 <pinref part="P+6" gate="1" pin="+12V"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="XTALIN"/>
+<pinref part="Q1" gate="G$1" pin="2"/>
+<wire x1="175.26" y1="144.78" x2="167.64" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="162.56" y1="147.32" x2="167.64" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="147.32" x2="167.64" y2="144.78" width="0.1524" layer="91"/>
+<junction x="167.64" y="144.78"/>
+</segment>
+</net>
+<net name="N$29" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="XTALOUT"/>
+<pinref part="Q1" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="139.7" x2="167.64" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="162.56" y1="137.16" x2="167.64" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="137.16" x2="167.64" y2="139.7" width="0.1524" layer="91"/>
+<junction x="167.64" y="139.7"/>
 </segment>
 </net>
 </nets>
