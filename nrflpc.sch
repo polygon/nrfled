@@ -9275,13 +9275,19 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <part name="C3" library="rcl" deviceset="C-EU" device="C0402" value="100nF"/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0402" value="100nF"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="R1" library="rcl" deviceset="R-US_" device="R0402"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="R0402" value="100k"/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0402" value="100nF"/>
 <part name="PWR" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="P+1" library="supply1" deviceset="+12V" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
+<part name="C12" library="SparkFun" deviceset="CAP" device="0402-CAP" value="200pF"/>
+<part name="R18" library="rcl" deviceset="R-US_" device="R0402" value="4.7k"/>
+<part name="GND14" library="supply1" deviceset="GND" device=""/>
+<part name="C13" library="SparkFun" deviceset="CAP" device="0402-CAP" value="200pF"/>
+<part name="R19" library="rcl" deviceset="R-US_" device="R0402" value="4.7k"/>
+<part name="GND15" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9414,6 +9420,12 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <instance part="PWR" gate="G$1" x="88.9" y="160.02"/>
 <instance part="P+1" gate="1" x="76.2" y="167.64"/>
 <instance part="GND12" gate="1" x="76.2" y="154.94"/>
+<instance part="C12" gate="G$1" x="312.42" y="101.6" rot="R180"/>
+<instance part="R18" gate="G$1" x="322.58" y="109.22" rot="R180"/>
+<instance part="GND14" gate="1" x="312.42" y="93.98"/>
+<instance part="C13" gate="G$1" x="365.76" y="101.6" rot="R180"/>
+<instance part="R19" gate="G$1" x="375.92" y="109.22" rot="R180"/>
+<instance part="GND15" gate="1" x="365.76" y="93.98"/>
 </instances>
 <busses>
 </busses>
@@ -9585,6 +9597,14 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <wire x1="86.36" y1="160.02" x2="76.2" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="160.02" x2="76.2" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C12" gate="G$1" pin="1"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C13" gate="G$1" pin="1"/>
+<pinref part="GND15" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="!RST" class="0">
@@ -10160,11 +10180,20 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <junction x="167.64" y="139.7"/>
 </segment>
 </net>
-<net name="AD0" class="0">
+<net name="AD6" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PIO1_10/AD6/CT16B1_MAT1"/>
 <wire x1="231.14" y1="139.7" x2="241.3" y2="139.7" width="0.1524" layer="91"/>
 <label x="236.22" y="139.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R19" gate="G$1" pin="2"/>
+<wire x1="370.84" y1="109.22" x2="365.76" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="C13" gate="G$1" pin="2"/>
+<wire x1="365.76" y1="109.22" x2="350.52" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="365.76" y1="104.14" x2="365.76" y2="109.22" width="0.1524" layer="91"/>
+<junction x="365.76" y="109.22"/>
+<label x="350.52" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="AD1" class="0">
@@ -10172,6 +10201,15 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <pinref part="IC1" gate="G$1" pin="R/PIO1_0/AD1/CT32B1_CAP0"/>
 <wire x1="231.14" y1="165.1" x2="241.3" y2="165.1" width="0.1524" layer="91"/>
 <label x="236.22" y="165.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="2"/>
+<wire x1="317.5" y1="109.22" x2="312.42" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="312.42" y1="109.22" x2="297.18" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="104.14" x2="312.42" y2="109.22" width="0.1524" layer="91"/>
+<junction x="312.42" y="109.22"/>
+<label x="297.18" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO0" class="0">
@@ -10193,6 +10231,20 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <pinref part="IC1" gate="G$1" pin="PIO0_5/SDA"/>
 <wire x1="231.14" y1="185.42" x2="241.3" y2="185.42" width="0.1524" layer="91"/>
 <label x="236.22" y="185.42" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="AIN0" class="0">
+<segment>
+<pinref part="R18" gate="G$1" pin="1"/>
+<wire x1="327.66" y1="109.22" x2="337.82" y2="109.22" width="0.1524" layer="91"/>
+<label x="330.2" y="109.22" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="AIN1" class="0">
+<segment>
+<pinref part="R19" gate="G$1" pin="1"/>
+<wire x1="381" y1="109.22" x2="391.16" y2="109.22" width="0.1524" layer="91"/>
+<label x="383.54" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
