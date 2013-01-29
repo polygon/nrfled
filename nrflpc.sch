@@ -9807,6 +9807,15 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <wire x1="76.2" y1="162.56" x2="76.2" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="1" pin="+12V"/>
 </segment>
+<segment>
+<wire x1="187.96" y1="48.26" x2="193.04" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="45.72" x2="193.04" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="C16" gate="G$1" pin="2"/>
+<pinref part="P+6" gate="1" pin="+12V"/>
+<pinref part="IC8" gate="G$1" pin="VIN"/>
+<wire x1="198.12" y1="48.26" x2="193.04" y2="48.26" width="0.1524" layer="91"/>
+<junction x="193.04" y="48.26"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -10149,17 +10158,6 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <pinref part="IC1" gate="G$1" pin="PIO0_7/!CTS!"/>
 <wire x1="231.14" y1="180.34" x2="241.3" y2="180.34" width="0.1524" layer="91"/>
 <label x="236.22" y="180.34" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<wire x1="187.96" y1="48.26" x2="193.04" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="48.26" x2="198.12" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="45.72" x2="193.04" y2="48.26" width="0.1524" layer="91"/>
-<junction x="193.04" y="48.26"/>
-<pinref part="IC8" gate="G$1" pin="VIN"/>
-<pinref part="C16" gate="G$1" pin="2"/>
-<pinref part="P+6" gate="1" pin="+12V"/>
 </segment>
 </net>
 <net name="N$19" class="0">
