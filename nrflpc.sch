@@ -9185,6 +9185,115 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 </deviceset>
 </devicesets>
 </library>
+<library name="linear-technology">
+<description>&lt;b&gt;Linear Technology Devices&lt;/b&gt;&lt;p&gt;
+http://www.linear-tech.com&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="SOIC8">
+<description>&lt;b&gt;Small Outline IC&lt;/b&gt;</description>
+<wire x1="2.4" y1="1.9" x2="2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.9" x2="-2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.9" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.4" x2="-2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="1.9" x2="2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<smd name="2" x="-0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="7" x="-0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="1" x="-1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="3" x="0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="4" x="1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="8" x="-1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="6" x="0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="5" x="1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<text x="-2.667" y="-1.905" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.937" y="-1.905" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-2.15" y1="-3.1" x2="-1.66" y2="-2" layer="51"/>
+<rectangle x1="-0.88" y1="-3.1" x2="-0.39" y2="-2" layer="51"/>
+<rectangle x1="0.39" y1="-3.1" x2="0.88" y2="-2" layer="51"/>
+<rectangle x1="1.66" y1="-3.1" x2="2.15" y2="-2" layer="51"/>
+<rectangle x1="1.66" y1="2" x2="2.15" y2="3.1" layer="51"/>
+<rectangle x1="0.39" y1="2" x2="0.88" y2="3.1" layer="51"/>
+<rectangle x1="-0.88" y1="2" x2="-0.39" y2="3.1" layer="51"/>
+<rectangle x1="-2.15" y1="2" x2="-1.66" y2="3.1" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="LT1763">
+<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<text x="-3.302" y="-6.604" size="1.524" layer="95">GND</text>
+<text x="-10.16" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="0" y="6.35" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="IN" x="-12.7" y="2.54" length="short" direction="in"/>
+<pin name="OUT" x="12.7" y="2.54" length="short" direction="pas" rot="R180"/>
+<pin name="!SHDN" x="-12.7" y="-2.54" length="short" direction="in"/>
+<pin name="SENSE" x="12.7" y="0" length="short" direction="in" rot="R180"/>
+<pin name="GND@1" x="-2.54" y="-10.16" visible="pad" length="short" direction="pwr" rot="R90"/>
+<pin name="GND@2" x="0" y="-10.16" visible="pad" length="short" direction="pwr" rot="R90"/>
+<pin name="GND@3" x="2.54" y="-10.16" visible="pad" length="short" direction="pwr" rot="R90"/>
+<pin name="BYP" x="12.7" y="-5.08" length="short" direction="in" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LT1763CS8" prefix="IC">
+<description>&lt;b&gt;500mA, Low Noise, LDO Micropower Regulators&lt;/b&gt;&lt;p&gt;
+Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
+<gates>
+<gate name="G$1" symbol="LT1763" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOIC8">
+<connects>
+<connect gate="G$1" pin="!SHDN" pad="5"/>
+<connect gate="G$1" pin="BYP" pad="4"/>
+<connect gate="G$1" pin="GND@1" pad="3"/>
+<connect gate="G$1" pin="GND@2" pad="6"/>
+<connect gate="G$1" pin="GND@3" pad="7"/>
+<connect gate="G$1" pin="IN" pad="8"/>
+<connect gate="G$1" pin="OUT" pad="1"/>
+<connect gate="G$1" pin="SENSE" pad="2"/>
+</connects>
+<technologies>
+<technology name="-1.5">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="LT1763CS8-1.5" constant="no"/>
+<attribute name="OC_FARNELL" value="1501016" constant="no"/>
+<attribute name="OC_NEWARK" value="57M6043" constant="no"/>
+</technology>
+<technology name="-1.8">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="LT1763CS8-1.8" constant="no"/>
+<attribute name="OC_FARNELL" value="1273615" constant="no"/>
+<attribute name="OC_NEWARK" value="57M6047" constant="no"/>
+</technology>
+<technology name="-2.5">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="LT1763CS8-2.5" constant="no"/>
+<attribute name="OC_FARNELL" value="1273616" constant="no"/>
+<attribute name="OC_NEWARK" value="57M6051" constant="no"/>
+</technology>
+<technology name="-3">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="LT1763CS8-3" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="02E0014" constant="no"/>
+</technology>
+<technology name="-3.3">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="LT1763CS8-3.3" constant="no"/>
+<attribute name="OC_FARNELL" value="1273617" constant="no"/>
+<attribute name="OC_NEWARK" value="57M6055" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9290,6 +9399,10 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="R20" library="rcl" deviceset="R-US_" device="R0402" value="150"/>
 <part name="R21" library="rcl" deviceset="R-US_" device="R0402" value="150"/>
+<part name="IC2" library="linear-technology" deviceset="LT1763CS8" device="" technology="-3.3"/>
+<part name="R22" library="rcl" deviceset="R-US_" device="R0402" value="150"/>
+<part name="R23" library="rcl" deviceset="R-US_" device="R0402" value="15k"/>
+<part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9430,6 +9543,10 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <instance part="GND15" gate="1" x="365.76" y="93.98"/>
 <instance part="R20" gate="G$1" x="238.76" y="149.86"/>
 <instance part="R21" gate="G$1" x="238.76" y="147.32"/>
+<instance part="IC2" gate="G$1" x="254" y="60.96"/>
+<instance part="R22" gate="G$1" x="256.54" y="195.58"/>
+<instance part="R23" gate="G$1" x="248.92" y="203.2" rot="R90"/>
+<instance part="+3V3" gate="G$1" x="248.92" y="213.36"/>
 </instances>
 <busses>
 </busses>
@@ -10087,6 +10204,11 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 <wire x1="302.26" y1="165.1" x2="302.26" y2="162.56" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+<pinref part="R23" gate="G$1" pin="2"/>
+<wire x1="248.92" y1="210.82" x2="248.92" y2="208.28" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="CE" class="0">
 <segment>
@@ -10261,6 +10383,24 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <pinref part="IC1" gate="G$1" pin="PIO1_7/TXD/CT32B0_MAT1"/>
 <pinref part="R21" gate="G$1" pin="1"/>
 <wire x1="231.14" y1="147.32" x2="233.68" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PIO0_1/CLKOUT/CT32B0_MAT2"/>
+<wire x1="231.14" y1="195.58" x2="248.92" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="R22" gate="G$1" pin="1"/>
+<pinref part="R23" gate="G$1" pin="1"/>
+<wire x1="248.92" y1="195.58" x2="251.46" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="198.12" x2="248.92" y2="195.58" width="0.1524" layer="91"/>
+<junction x="248.92" y="195.58"/>
+</segment>
+</net>
+<net name="BOOTL" class="0">
+<segment>
+<pinref part="R22" gate="G$1" pin="2"/>
+<wire x1="261.62" y1="195.58" x2="269.24" y2="195.58" width="0.1524" layer="91"/>
+<label x="261.62" y="195.58" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
