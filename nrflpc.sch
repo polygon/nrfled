@@ -15527,15 +15527,6 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <wire x1="-1.025" y1="3.2" x2="-0.925" y2="3.2" width="0.15" layer="51" curve="180" cap="flat"/>
 <wire x1="-1.675" y1="3.2" x2="-1.575" y2="3.2" width="0.15" layer="51" curve="180" cap="flat"/>
 <wire x1="-2.325" y1="3.2" x2="-2.225" y2="3.2" width="0.15" layer="51" curve="180" cap="flat"/>
-<pad name="38" x="1.55" y="0" drill="0.5" diameter="1.6" shape="square" stop="no"/>
-<pad name="37" x="-1.55" y="0" drill="0.5" diameter="1.6" shape="square" stop="no"/>
-<pad name="35" x="0" y="1.55" drill="0.5" diameter="1.6" shape="square" stop="no"/>
-<pad name="40" x="0" y="-1.55" drill="0.5" diameter="1.6" shape="square" stop="no"/>
-<pad name="36" x="1.55" y="1.55" drill="0.5" diameter="1.6" shape="square" stop="no"/>
-<pad name="34" x="-1.55" y="1.55" drill="0.5" diameter="1.6" shape="square" stop="no"/>
-<pad name="39" x="-1.55" y="-1.55" drill="0.5" diameter="1.6" shape="square" stop="no"/>
-<pad name="41" x="1.55" y="-1.55" drill="0.5" diameter="1.6" shape="square" stop="no"/>
-<pad name="33" x="0" y="0" drill="0.5" diameter="1.6" shape="square" stop="no"/>
 <smd name="1" x="-3.4" y="2.275" dx="0.35" dy="1.2" layer="1" rot="R90" stop="no"/>
 <smd name="2" x="-3.4" y="1.625" dx="0.35" dy="1.2" layer="1" rot="R90" stop="no"/>
 <smd name="3" x="-3.4" y="0.975" dx="0.35" dy="1.2" layer="1" rot="R90" stop="no"/>
@@ -15640,6 +15631,7 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <rectangle x1="0.5" y1="-2.35" x2="1.05" y2="2.35" layer="31"/>
 <rectangle x1="-1.05" y1="-2.35" x2="-0.5" y2="2.35" layer="31"/>
 <rectangle x1="-2.4" y1="-2.4" x2="2.4" y2="2.4" layer="29"/>
+<smd name="GND" x="0" y="0" dx="4.7" dy="4.55" layer="1"/>
 </package>
 </packages>
 <symbols>
@@ -15743,7 +15735,7 @@ Product Page: &lt;a href=http://ics.nxp.com/products/lpc1000/lpc11xx/"&gt;http:/
 <connect gate="G$1" pin="SWDIO/PIO1_3/AD4/CT32B1_MAT2" pad="25"/>
 <connect gate="G$1" pin="VDD1" pad="29"/>
 <connect gate="G$1" pin="VDD2" pad="6"/>
-<connect gate="G$1" pin="VSS" pad="33"/>
+<connect gate="G$1" pin="VSS" pad="GND"/>
 <connect gate="G$1" pin="XTALIN" pad="4"/>
 <connect gate="G$1" pin="XTALOUT" pad="5"/>
 </connects>
