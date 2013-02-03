@@ -276,6 +276,20 @@ drill 1.4 mm</description>
 <smd name="1" x="1.2" y="0.9" dx="1.3" dy="1" layer="1"/>
 <smd name="4" x="1.2" y="-0.9" dx="1.3" dy="1" layer="1"/>
 </package>
+<package name="SWITCH_SKQG">
+<wire x1="2.6" y1="2.6" x2="-2.6" y2="2.6" width="0.127" layer="21"/>
+<wire x1="-2.6" y1="1.1" x2="-2.6" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="-2.6" y1="-2.6" x2="2.6" y2="-2.6" width="0.127" layer="21"/>
+<wire x1="2.6" y1="-1.1" x2="2.6" y2="1.1" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="1.5033" width="0.127" layer="21"/>
+<smd name="2A" x="-3.1" y="-1.85" dx="1.1" dy="1.8" layer="1" rot="R90"/>
+<smd name="2B" x="3.1" y="-1.85" dx="1.1" dy="1.8" layer="1" rot="R90"/>
+<smd name="1A" x="-3.1" y="1.85" dx="1.1" dy="1.8" layer="1" rot="R90"/>
+<smd name="1B" x="3.1" y="1.85" dx="1.1" dy="1.8" layer="1" rot="R90"/>
+<text x="-4" y="3.2" size="0.8128" layer="25" font="vector">&gt;NAME</text>
+<rectangle x1="-4" y1="-1.1" x2="-1.1" y2="1.1" layer="41"/>
+<rectangle x1="1.1" y1="-1.1" x2="4" y2="1.1" layer="41"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LM3401">
@@ -316,6 +330,27 @@ drill 1.4 mm</description>
 <text x="1.524" y="-1.143" size="0.8636" layer="93">2</text>
 <pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="SWITCH2">
+<wire x1="1.905" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="1.905" y1="4.445" x2="1.905" y2="3.175" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="4.445" x2="-1.905" y2="3.175" width="0.254" layer="94"/>
+<wire x1="1.905" y1="4.445" x2="0" y2="4.445" width="0.254" layer="94"/>
+<wire x1="0" y1="4.445" x2="-1.905" y2="4.445" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="0" y1="4.445" x2="0" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="1.905" y2="1.27" width="0.254" layer="94"/>
+<circle x="-2.54" y="0" radius="0.127" width="0.4064" layer="94"/>
+<circle x="2.54" y="0" radius="0.127" width="0.4064" layer="94"/>
+<text x="-2.54" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="3.175" y="3.81" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1A" x="-5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="2"/>
+<pin name="2A" x="5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="2B" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1B" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas" swaplevel="2"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -366,6 +401,24 @@ drill 1.4 mm</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWITCH_SKQG" prefix="SW">
+<gates>
+<gate name="G$1" symbol="SWITCH2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SWITCH_SKQG">
+<connects>
+<connect gate="G$1" pin="1A" pad="1A"/>
+<connect gate="G$1" pin="1B" pad="1B"/>
+<connect gate="G$1" pin="2A" pad="2A"/>
+<connect gate="G$1" pin="2B" pad="2B"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15970,6 +16023,8 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <part name="R23" library="rcl" deviceset="R-US_" device="R0402" value="150"/>
 <part name="R24" library="rcl" deviceset="R-US_" device="R0402" value="150"/>
 <part name="R25" library="rcl" deviceset="R-US_" device="R0402" value="150"/>
+<part name="SW1" library="seb" deviceset="SWITCH_SKQG" device=""/>
+<part name="GND17" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16119,6 +16174,8 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <instance part="R23" gate="G$1" x="246.38" y="190.5"/>
 <instance part="R24" gate="G$1" x="246.38" y="187.96"/>
 <instance part="R25" gate="G$1" x="246.38" y="185.42"/>
+<instance part="SW1" gate="G$1" x="320.04" y="149.86"/>
+<instance part="GND17" gate="1" x="330.2" y="134.62"/>
 </instances>
 <busses>
 </busses>
@@ -16302,6 +16359,12 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <wire x1="281.94" y1="170.18" x2="299.72" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="SW1" gate="G$1" pin="2A"/>
+<pinref part="GND17" gate="1" pin="GND"/>
+<wire x1="325.12" y1="149.86" x2="330.2" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="330.2" y1="149.86" x2="330.2" y2="137.16" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="!RST" class="0">
 <segment>
@@ -16309,6 +16372,9 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <wire x1="302.26" y1="147.32" x2="302.26" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="302.26" y1="149.86" x2="289.56" y2="149.86" width="0.1524" layer="91"/>
 <label x="292.1" y="149.86" size="1.778" layer="95"/>
+<pinref part="SW1" gate="G$1" pin="1A"/>
+<wire x1="314.96" y1="149.86" x2="302.26" y2="149.86" width="0.1524" layer="91"/>
+<junction x="302.26" y="149.86"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="!RESET!/PIO0_0"/>
