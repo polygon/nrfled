@@ -15984,7 +15984,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="FTDI" library="pinhead" deviceset="PINHD-1X6" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="JP1" library="pinhead" deviceset="PINHD-2X4" device=""/>
+<part name="NRF" library="pinhead" deviceset="PINHD-2X4" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="IC1" library="lpc1100v1.1" deviceset="LPC1111/12/13/14-HVQFN33" device=""/>
@@ -16023,7 +16023,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <part name="R23" library="rcl" deviceset="R-US_" device="R0402" value="150"/>
 <part name="R24" library="rcl" deviceset="R-US_" device="R0402" value="150"/>
 <part name="R25" library="rcl" deviceset="R-US_" device="R0402" value="150"/>
-<part name="SW1" library="seb" deviceset="SWITCH_SKQG" device=""/>
+<part name="RESET" library="seb" deviceset="SWITCH_SKQG" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -16135,7 +16135,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <instance part="+3V1" gate="G$1" x="243.84" y="50.8"/>
 <instance part="FTDI" gate="A" x="88.9" y="144.78"/>
 <instance part="GND8" gate="1" x="73.66" y="134.62"/>
-<instance part="JP1" gate="A" x="106.68" y="93.98" rot="R180"/>
+<instance part="NRF" gate="A" x="106.68" y="93.98" rot="R180"/>
 <instance part="+3V2" gate="G$1" x="83.82" y="91.44"/>
 <instance part="GND3" gate="1" x="127" y="86.36"/>
 <instance part="IC1" gate="G$1" x="203.2" y="142.24"/>
@@ -16159,7 +16159,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <instance part="C13" gate="G$1" x="365.76" y="101.6" rot="R180"/>
 <instance part="R19" gate="G$1" x="375.92" y="109.22" rot="R180"/>
 <instance part="GND15" gate="1" x="365.76" y="93.98"/>
-<instance part="R20" gate="G$1" x="238.76" y="149.86"/>
+<instance part="R20" gate="G$1" x="241.3" y="149.86"/>
 <instance part="R21" gate="G$1" x="238.76" y="147.32"/>
 <instance part="IC2" gate="G$1" x="208.28" y="45.72"/>
 <instance part="C18" gate="G$1" x="228.6" y="43.18" rot="R180"/>
@@ -16174,7 +16174,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <instance part="R23" gate="G$1" x="246.38" y="190.5"/>
 <instance part="R24" gate="G$1" x="246.38" y="187.96"/>
 <instance part="R25" gate="G$1" x="246.38" y="185.42"/>
-<instance part="SW1" gate="G$1" x="320.04" y="149.86"/>
+<instance part="RESET" gate="G$1" x="320.04" y="149.86"/>
 <instance part="GND17" gate="1" x="330.2" y="134.62"/>
 </instances>
 <busses>
@@ -16298,7 +16298,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <pinref part="C17" gate="G$1" pin="-"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="1"/>
+<pinref part="NRF" gate="A" pin="1"/>
 <wire x1="109.22" y1="88.9" x2="124.46" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="124.46" y1="88.9" x2="127" y2="88.9" width="0.1524" layer="91"/>
@@ -16360,7 +16360,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <pinref part="GND16" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="SW1" gate="G$1" pin="2A"/>
+<pinref part="RESET" gate="G$1" pin="2A"/>
 <pinref part="GND17" gate="1" pin="GND"/>
 <wire x1="325.12" y1="149.86" x2="330.2" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="330.2" y1="149.86" x2="330.2" y2="137.16" width="0.1524" layer="91"/>
@@ -16372,7 +16372,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <wire x1="302.26" y1="147.32" x2="302.26" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="302.26" y1="149.86" x2="289.56" y2="149.86" width="0.1524" layer="91"/>
 <label x="292.1" y="149.86" size="1.778" layer="95"/>
-<pinref part="SW1" gate="G$1" pin="1A"/>
+<pinref part="RESET" gate="G$1" pin="1A"/>
 <wire x1="314.96" y1="149.86" x2="302.26" y2="149.86" width="0.1524" layer="91"/>
 <junction x="302.26" y="149.86"/>
 </segment>
@@ -16402,7 +16402,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <net name="RXD" class="0">
 <segment>
 <pinref part="R20" gate="G$1" pin="2"/>
-<wire x1="243.84" y1="149.86" x2="254" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="149.86" x2="254" y2="149.86" width="0.1524" layer="91"/>
 <label x="248.92" y="149.86" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -16824,7 +16824,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <pinref part="C17" gate="G$1" pin="+"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="2"/>
+<pinref part="NRF" gate="A" pin="2"/>
 <wire x1="101.6" y1="88.9" x2="83.82" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 </segment>
@@ -16864,7 +16864,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 </net>
 <net name="CE" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="3"/>
+<pinref part="NRF" gate="A" pin="3"/>
 <wire x1="109.22" y1="91.44" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
 <label x="124.46" y="91.44" size="1.778" layer="95"/>
 </segment>
@@ -16876,7 +16876,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 </net>
 <net name="SCK" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="5"/>
+<pinref part="NRF" gate="A" pin="5"/>
 <wire x1="109.22" y1="93.98" x2="124.46" y2="93.98" width="0.1524" layer="91"/>
 <label x="124.46" y="93.98" size="1.778" layer="95"/>
 </segment>
@@ -16888,7 +16888,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 </net>
 <net name="MISO" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="7"/>
+<pinref part="NRF" gate="A" pin="7"/>
 <wire x1="109.22" y1="96.52" x2="124.46" y2="96.52" width="0.1524" layer="91"/>
 <label x="124.46" y="96.52" size="1.778" layer="95"/>
 </segment>
@@ -16900,7 +16900,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 </net>
 <net name="IRQ" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="8"/>
+<pinref part="NRF" gate="A" pin="8"/>
 <wire x1="101.6" y1="96.52" x2="86.36" y2="96.52" width="0.1524" layer="91"/>
 <label x="86.36" y="96.52" size="1.778" layer="95"/>
 </segment>
@@ -16912,7 +16912,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 </net>
 <net name="MOSI" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="6"/>
+<pinref part="NRF" gate="A" pin="6"/>
 <wire x1="101.6" y1="93.98" x2="86.36" y2="93.98" width="0.1524" layer="91"/>
 <label x="86.36" y="93.98" size="1.778" layer="95"/>
 </segment>
@@ -16924,7 +16924,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 </net>
 <net name="CSN" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="4"/>
+<pinref part="NRF" gate="A" pin="4"/>
 <wire x1="101.6" y1="91.44" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
 <label x="86.36" y="91.44" size="1.778" layer="95"/>
 </segment>
@@ -17058,7 +17058,7 @@ Source: http://cds.linear.com/docs/Datasheet/1763ff.pdf</description>
 <segment>
 <pinref part="IC1" gate="G$1" pin="PIO1_6/RXD/CT32B0_MAT0"/>
 <pinref part="R20" gate="G$1" pin="1"/>
-<wire x1="231.14" y1="149.86" x2="233.68" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="149.86" x2="236.22" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$30" class="0">
